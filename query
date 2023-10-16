@@ -18,6 +18,11 @@ CREATE TABLE client(
 
  );
 3.
+CREATE TABLE suppliers(
+	supplier_id SERIAL PRIMARY KEY,
+	denomination VARCHAR(50),
+	region_address VARCHAR(50)
+);
 
  4.
  CREATE TABLE invoices (
@@ -27,5 +32,5 @@ CREATE TABLE client(
      iva VARCHAR(11),
      client_id INT REFERENCES client(client_id),
      invoice_date TIMESTAMP,
-     supplier_id INT REFERENCES supplier(supplier_id)
+     supplier_id INT REFERENCES suppliers(supplier_id)
  );
