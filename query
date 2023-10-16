@@ -47,3 +47,5 @@ FROM client
 WHERE EXTRACT(YEAR FROM birth_day) = 1982;
 
 2.
+SELECT* FROM invoices
+WHERE iva = '0.20';
