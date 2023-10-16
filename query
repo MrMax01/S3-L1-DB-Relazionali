@@ -49,3 +49,6 @@ WHERE EXTRACT(YEAR FROM birth_day) = 1982;
 2.
 SELECT* FROM invoices
 WHERE iva = '0.20';
+3.
+SELECT COUNT(*) AS total_count, SUM(amount) AS total_amount
+FROM invoices;
