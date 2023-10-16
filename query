@@ -8,8 +8,18 @@ CREATE TABLE client(
 
  );
  2.
+ CREATE TABLE products(
+ 	product_id SERIAL  PRIMARY KEY,
+ 	description VARCHAR(300),
+ 	in_production BOOLEAN ,
+ 	on_the_market BOOLEAN ,
+ 	activation_date TIMESTAMP ,
+ 	deactivation_date TIMESTAMP
 
- 3.
+ );
+3.
+
+ 4.
  CREATE TABLE invoices (
      invoice_id SERIAL PRIMARY KEY,
      type VARCHAR(50),
