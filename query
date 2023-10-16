@@ -39,3 +39,11 @@ CREATE TABLE suppliers(
 INSERT INTO public.client(
 	client_id, name, surname, region_address, birth_day)
 	VALUES (0, 'Massimo', 'Mauro', 'Piemonte', '1995-11-03');
+
+----------------------------------ESRCIZI--------------------------------------------
+1.
+SELECT *
+FROM client
+WHERE EXTRACT(YEAR FROM birth_day) = 1982;
+
+2.
