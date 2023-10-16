@@ -34,3 +34,8 @@ CREATE TABLE suppliers(
      invoice_date TIMESTAMP,
      supplier_id INT REFERENCES suppliers(supplier_id)
  );
+
+5.
+INSERT INTO public.client(
+	client_id, name, surname, region_address, birth_day)
+	VALUES (0, 'Massimo', 'Mauro', 'Piemonte', '1995-11-03');
