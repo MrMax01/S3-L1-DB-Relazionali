@@ -1,0 +1,21 @@
+1.
+CREATE TABLE client(
+   	client_id SERIAL PRIMARY KEY,
+   	name VARCHAR(50) NOT NULL,
+   	surname VARCHAR(50) NOT NULL,
+   	birth_day TIME NOT NULL,
+   	region_address VARCHAR(50) NOT NULL,
+
+ );
+ 2.
+
+ 3.
+ CREATE TABLE invoices (
+     invoice_id SERIAL PRIMARY KEY,
+     type VARCHAR(50),
+     amount DOUBLE PRECISION,
+     iva VARCHAR(11),
+     client_id INT REFERENCES client(client_id),
+     invoice_date TIMESTAMP,
+     supplier_id INT REFERENCES supplier(supplier_id)
+ );
